@@ -14,51 +14,56 @@
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
   <script type="text/babel">
     const root = document.getElementById("root");
-    function Title() {
-      return (
-        <h3 id="title" onMouseEnter={() => console.log("mouse")}>
-          Hello I'm a Title
-        </h3>
-      );
+    let counter = 0;
+    function countUp() {
+      counter = counter + 1;
+      render();
+    }
+
+    function render() {
+      ReactDOM.render(<Container />, root);
     }
     /*  const Title = #__PURE__ React.createElement(
-      "h3",
-      {
-        id: "title",
-        onMouseEnter: () => console.log,
-      },
-      "Hello I'm a title"
-    );*/
-    const Button = () => (
-      <button
-        style={{
-          backgroundColor: "purple",
-        }}
-        onClick={() => console.log("im clicked")}
-      >
-        Click me
-      </button>
-    );
+       "h3",
+       {
+         id: "title",
+         onMouseEnter: () => console.log,
+       },
+       "Hello I'm a title"
+     );*/
+
     /*const h3 = React.createElement("h3",{
-    onMouseEnter:()=>console.log("mouse enter"),
-    },
-    "Hello I'm a span");
-    const btn = React.createElement("button",{
-    onClick:()=> console.log('im clicked'),
-    style:{
-        backgroundColor:"purple",
+     onMouseEnter:()=>console.log("mouse enter"),
+     },
+     "Hello I'm a span");
+     const btn = React.createElement("button",{
+     onClick:()=> console.log('im clicked'),
+     style:{
+         backgroundColor:"purple",
+     }
+     },"click me");*/
+    function Container() {
+      return (
+        <div
+          style={{
+            fontSize: "30px",
+          }}
+        >
+          <h3>Total clicks:{counter}</h3>
+          <button onClick={countUp}>Click me</button>
+        </div>
+      );
     }
-    },"click me");*/
-    const Container = (
-      <div
-        style={{
-          fontSize: "30px",
-        }}
-      >
-        <Title />
-        <Button />
-      </div>
-    );
-    ReactDOM.render(<Container />, root);
+    /* const Container = () => (
+       <div
+         style={{
+           fontSize: "30px",
+         }}
+       >
+         <h3>Total clicks:{counter}</h3>
+         <button onClick={countUp}>Click me</button>
+       </div>
+     );*/
+    render();
   </script>
 </html>
