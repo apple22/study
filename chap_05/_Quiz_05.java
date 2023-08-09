@@ -22,7 +22,7 @@ public class _Quiz_05 {
         }/*for*/
         for (int size:
              sizeArray) {
-            System.out.println("사이즈" + size + " (재고있음) ");
+        System.out.println("사이즈" + size + " (재고있음) ");
         }
-    }/*main*/
-}/*class*/
+        }/*main*/
+        }/*class*/
