@@ -2,7 +2,7 @@ package chap_05;
 
 public class _01_Array {
     public static void main(String[] args) {
-        //배열 : 같은 자료형의 값 여러개를 적용하는 공간
+        //       배열 : 같은 자료형의 값 여러개를 적용하는 공간
 //        String coffeeRoss = "아메리카노";
 //        String coffeeRachel = "카페모카";
 //        String coffeeCahandler = "라떼";
@@ -31,18 +31,7 @@ public class _01_Array {
 
         coffees[2] = "에스프레소";
 
-
-        System.out.println(coffees[0] + " 하나");//아메리카노 하나
-        System.out.println(coffees[1] + " 하나");//아메리카노 하나
-        System.out.println(coffees[2] + " 하나");//아메리카노 하나
-        System.out.println(coffees[3] + " 하나");//아메리카노 하나
-
-        // 다른 자료형
-        int[] i = new int[3];
-        i[0] = 1;
-        i[1] = 2;
-        i[2] = 3;
-
+;
 
 
     }
