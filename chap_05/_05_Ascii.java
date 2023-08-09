@@ -22,8 +22,6 @@ public class _05_Ascii {
             ch++;
         }
 
-
-
         //영화관 좌석 번호 확인
         for (int i = 0; i < seat3.length; i++) { //세
             for (int j = 0; j < seat3[i].length; j++) { //가로
