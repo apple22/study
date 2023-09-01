@@ -46,13 +46,11 @@ public class DeptServiceImpl extends EgovAbstractServiceImpl implements DeptSevi
 		return deptDAO.deleteDept(deptno);
 	}
 
+	@Override
+	public int updateDept(DeptVO vo) throws Exception {
+		return deptDAO.updateDept(vo);
+	}
 
 
-	/*
-	 * @Override public void hap() { // TODO Auto-generated method stub
-	 * 
-	 * }
-	 */
 
-	
 }

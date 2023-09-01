@@ -10,5 +10,6 @@ public String InsertDept(DeptVO vo) throws Exception;
 public List<?> selectDeptList(DeptVO vo) throws Exception;
 public DeptVO selectdeptDetail(int deptno) throws Exception;
 public int deleteDept(int deptno) throws Exception;
+public int updateDept(DeptVO vo) throws Exception;
 
 }

@@ -37,7 +37,7 @@ th, td {
 		</tr>
 		<tr>
 			<th colspan="2">
-				<button type="button">수정</button>
+				<button type="button" onclick="location='deptModifyWrite.do?deptno=${DeptVO.deptno}'">수정</button>
 				<button type="button" onclick="location='deptDelete.do?deptno=${DeptVO.deptno}'">삭제</button>
 			</th>
 		</tr>

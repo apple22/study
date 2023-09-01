@@ -1,4 +1,5 @@
 package egovframework.example.sample.web;
+
 import java.util.List;
 import javax.annotation.Resource;
 import org.springframework.beans.factory.annotation.Value;
@@ -7,16 +8,19 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import egovframework.example.sample.service.DeptSevice;
 import egovframework.example.sample.service.DeptVO;
+
 //어노테이션
 // @ : 주석
 @Controller
 public class DeptController {
 	@Resource(name = "deptService")
 	private DeptSevice deptService;
+
 	@RequestMapping(value = "/deptWrite.do")
 	public String deptWrite() {
 		return "dept/deptWrite";
 	}
+
 	@RequestMapping(value = "/deptWriteSave.do")
 	public String InsertDept(DeptVO vo) throws Exception {
 		System.out.println(vo.getDeptno());
@@ -31,33 +35,56 @@ public class DeptController {
 		}
 		return "";
 	}
-	@RequestMapping(value = "deptList.do") 
-	public String selectDeptList(DeptVO vo , ModelMap model) throws Exception {
+
+	@RequestMapping(value = "deptList.do")
+	public String selectDeptList(DeptVO vo, ModelMap model) throws Exception {
 		List<?> list = deptService.selectDeptList(vo);
 		System.out.println(list);
-		model.addAttribute("resultList",list);
+		model.addAttribute("resultList", list);
 		return "dept/deptList";
 	}
-	
-	
-	@RequestMapping(value="deptDelete.do") 
+
+	@RequestMapping(value = "deptDelete.do")
 	public String deleteDept(int deptno) throws Exception {
 		int result = deptService.deleteDept(deptno);
-		if(result == 1) {
+		if (result == 1) {
 			System.out.println("삭제완료");
-		}else {
+		} else {
 			System.out.println("삭제실패");
-			
 		}
-		
+
 		return "";
 	}
-	
-	
-	@RequestMapping(value="/deptDetail.do")
-	public String selectdeptDetail(int deptno , ModelMap model) throws Exception{
+
+	@RequestMapping(value = "/deptModifyWrite.do")
+	public String selectModify(int deptno, ModelMap model) throws Exception {
 		DeptVO vo = deptService.selectdeptDetail(deptno);
-		model.addAttribute("DeptVO",vo);
+		model.addAttribute("vo", vo);
+		return "dept/deptModifyWrite";
+	}
+
+	@RequestMapping(value = "/deptDetail.do")
+	public String selectdeptDetail(int deptno, ModelMap model) throws Exception {
+		DeptVO vo = deptService.selectdeptDetail(deptno);
+		model.addAttribute("DeptVO", vo);
 		return "dept/deptDetail";
 	}
+
+	@RequestMapping(value = "/deptModifySave.do")
+	public String updateDept(DeptVO vo) throws Exception {
+
+		int result = deptService.updateDept(vo);
+
+		if (result == 1) {
+
+			System.out.println("변경완료");
+
+		} else {
+
+			System.out.println("변경실패");
+
+		}
+		return "";
+	}
+
 }

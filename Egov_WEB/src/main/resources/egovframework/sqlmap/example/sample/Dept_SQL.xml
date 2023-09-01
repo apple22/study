@@ -6,15 +6,17 @@
 		type="egovframework.rte.psl.dataaccess.util.EgovMap" />
 	<typeAlias alias="DeptVO"
 		type="egovframework.example.sample.service.DeptVO" />
+	
+	<select id="deptDAO.selectDeptList" resultClass="egovMap">
+		select deptno,dname,loc from dept
+	</select>
+	
 
 	<insert id="deptDAO.InsertDept">
 		insert into dept (deptno,dname,loc) values(#deptno#,#dname#,#loc#)
 	</insert>
 
-	<select id="deptDAO.selectDeptList" resultClass="egovMap">
-		select deptno,dname,loc from dept
-	</select>
-
+	
 
 	<select id="deptDAO.selectdeptDetail" resultClass="DeptVO">
 	    	select deptno,dname,loc from dept where deptno = #deptno#
@@ -23,7 +25,10 @@
 	
 	<delete id="deptDAO.deleteDept">
 	      delete from dept where deptno = #deptno#
-	    
 	</delete>
+	      
+
+	
+	
 </sqlMap>
 
