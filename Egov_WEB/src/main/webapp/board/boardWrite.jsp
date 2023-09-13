@@ -86,13 +86,13 @@ function fn_submit(){
 
 			$.ajax({
 				type : "POST",
-				data : formdata,
+				data : formData,
 				url : "boardWriteSave.do",
 				dataType : "text", // 리턴 타입
 				success : function(data) { // controller -> "OK"
 					if (data == "ok") {
 						alert("저장 완료");
-						location = "boardList.do";
+						
 					}
 				},
 				error : function() {

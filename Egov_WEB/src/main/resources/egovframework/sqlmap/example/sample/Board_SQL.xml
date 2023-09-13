@@ -11,6 +11,17 @@
 		(unq,title,pass,name,content,hits,rdate) VALUES
 		(nboard_seq.nextval,#title#,#pass#,#name#,#content#,0,sysdate)
 	</insert>
+	<!-- List / hashMap -->
+	<select id="boardDAO.selectNBoardList" resultClass="egovMap">
+		SELECT unq,
+		title,
+		name,
+		hits,
+		rdate from nboard order by unq DESC
+
+	</select>
+
+
 
 
 

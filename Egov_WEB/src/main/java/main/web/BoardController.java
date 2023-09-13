@@ -5,13 +5,34 @@ import javax.annotation.Resource;
 import org.springframework.stereotype.Controller;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import main.service.BoardService;
+import main.service.BoardVO;
 
 @Controller
 public class BoardController {
 	@Resource(name="boardService")
 	private BoardService boardService;
+	
+	@ResponseBody
+	
+	@RequestMapping("/boardWriteSave.do")
+	public String insertBoard(BoardVO vo) throws Exception{
+		
+		//result = null;
+		String result = boardService.insertNBoard(vo);
+		String msg = "";
+		
+		if (result == null) {
+			msg = "ok";
+		} else {
+		
+			msg = "fail";
+		}
+
+		return msg;
+	}
 	
 
 	@RequestMapping("/boardWrite.do")
