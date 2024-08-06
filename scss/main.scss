@@ -1,0 +1,113 @@
+@charset "UTF-8";
+
+// Flexbox 믹스인 정의
+@mixin flex($justify) {
+    display: flex;
+    align-items: center;
+    justify-content: $justify;
+}
+
+@mixin background($image , $size){
+   background-size: $size;
+   background-position: center;
+   background-image: $image;
+   background-repeat: no-repeat;
+}
+
+@font-face {
+    font-family: 'Pretendard-bold';
+    src: url('/font/Pretendard-Bold.otf') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('/font/Pretendard-Regular.otf') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.banner{
+    height:324px;
+    width: 94.79166666667%; // 1820px;
+    @include background(url('/image/image_03.png'), cover);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+}
+
+header {
+    width: 94.79166666667%; // 1820px
+    height: 91.26px;
+    margin: auto!important;
+
+    div {
+        width: 94.50549450549%; // 1720px
+        height: 91.26px;
+        margin: auto;
+        @include flex(unset); 
+
+        ul:nth-child(1) {
+            float: left;
+            width: 18.02325581395%;
+            height: 30px;
+            @include flex(unset);
+            
+            img{
+                margin-right:3.54838709677%;
+            }
+        }
+
+        .gnb {
+            width: 56.97674418605%;
+            height:96px;
+            @include flex(unset);
+
+
+            ul{
+                width:66.32653061224%;
+                margin:auto;
+                height:inherit;
+                @include flex(space-between);
+
+                li{
+                    @include flex(space-between);
+                    font-size: 1.25em;
+                    color:rgba(255, 255, 255, 1);
+                    opacity:0.800000011920929;
+                    letter-spacing:-2.299999952316284;
+                    font-family: 'Pretendard-bold';
+                }/*li*/
+            }/*ul:nth-child(2)*/
+        }/*gnb*/
+
+
+        ul:nth-child(3){
+            width: 19%;
+            float:right;
+            height:32px;
+            margin-left:3%;
+            @include flex(space-between);
+
+            li:nth-child(1){
+                @include flex(space-between);
+                font-family: 'Pretendard-Regular';
+                font-size:1rem;
+                color:rgba(255, 255, 255, 1);
+                letter-spacing:-2.299999952316284;
+                min-width: 137px;
+             
+              
+            }
+        }
+    }
+}

@@ -1,0 +1,102 @@
+@font-face {
+  font-family: "Pretendard-bold";
+  src: url("/font/Pretendard-Bold.otf") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Pretendard-Regular";
+  src: url("/font/Pretendard-Regular.otf") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.banner {
+  height: 324px;
+  width: 94.7916666667%;
+  background-size: cover;
+  background-position: center;
+  background-image: url("/image/image_03.png");
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+}
+
+header {
+  width: 94.7916666667%;
+  height: 91.26px;
+  margin: auto !important;
+}
+header div {
+  width: 94.5054945055%;
+  height: 91.26px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: unset;
+  /*gnb*/
+}
+header div ul:nth-child(1) {
+  float: left;
+  width: 18.023255814%;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: unset;
+}
+header div ul:nth-child(1) img {
+  margin-right: 3.5483870968%;
+}
+header div .gnb {
+  width: 56.9767441861%;
+  height: 96px;
+  display: flex;
+  align-items: center;
+  justify-content: unset;
+  /*ul:nth-child(2)*/
+}
+header div .gnb ul {
+  width: 66.3265306122%;
+  margin: auto;
+  height: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /*li*/
+}
+header div .gnb ul li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.25em;
+  color: rgb(255, 255, 255);
+  opacity: 0.8000000119;
+  letter-spacing: -2.2999999523;
+  font-family: "Pretendard-bold";
+}
+header div ul:nth-child(3) {
+  width: 19%;
+  float: right;
+  height: 32px;
+  margin-left: 3%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header div ul:nth-child(3) li:nth-child(1) {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: "Pretendard-Regular";
+  font-size: 1rem;
+  color: rgb(255, 255, 255);
+  letter-spacing: -2.2999999523;
+  min-width: 137px;
+}
