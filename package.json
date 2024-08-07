@@ -2,8 +2,8 @@
   "name": "html",
   "version": "1.0.0",
   "main": "index.js",
- "scripts": {
-  "build": "gulp build",
+"scripts": {
+  "build": "npx gulp build",
   "predeploy": "CI=true npm run build",
   "test": "echo \"Error: no test specified\" && exit 1"
 },
