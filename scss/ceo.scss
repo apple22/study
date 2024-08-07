@@ -1,0 +1,88 @@
+@charset "UTF-8";
+
+// Flexbox 믹스인 정의
+@mixin flex($justify) {
+  display: flex;
+  align-items: center;
+  justify-content: $justify;
+}
+
+@mixin background($image, $size) {
+  background-size: $size;
+  background-position: center;
+  background-image: $image;
+  background-repeat: no-repeat;
+}
+
+.block_01{
+    width: 94.79166666667%; // 1820px
+    height: 920px;
+    position:relative;
+    margin:auto;
+    margin-top:60px;
+    @include flex(space-around);
+
+    .left{
+        height:700px;
+        width:38.46153846154%;
+    }
+
+    .right{
+        height:100%;
+        width:46.15384615385%;
+        @include flex(unset);
+
+        ul{
+            width:100%;
+            height:594px;
+
+            .subject{
+                font-size: 2.5rem;
+                color: rgb(0, 0, 0);
+                letter-spacing: -1px;
+                font-family: Pretendard-bold;
+                text-align: left;
+                white-space: normal;
+                max-width: 95%;
+                word-break: break-word;
+                line-height: 1.4;
+            }/*subejct*/
+
+            .content{
+                font-family: "Pretendard-Regular";
+                text-align: left;
+                white-space: normal;
+                word-break: break-word;
+                font-size:1.125em;
+                max-width: 95%;
+                letter-spacing:-4;
+                line-height: 40px;
+                margin-top:30px;
+                color:rgba(34.00000177323818, 34.00000177323818, 34.00000177323818, 1);
+            }
+
+            .ceo_sign{
+                font-family: "Pretendard-Regular";
+                color:rgba(0, 0, 0, 1);
+    
+                span{
+                    font-family: "Pretendard-bold";
+                    display: block;
+                    width:100%;
+                  
+                }
+                
+                span:nth-child(1){
+                    font-size:1.125rem;
+                    margin-top:30px;
+                    height:29px;
+                    margin-bottom: 3px;
+                }
+
+                span:nth-child(2){
+                    font-size:1.875rem;
+                }
+            }
+        }/*ul*/
+    }/*right*/
+}

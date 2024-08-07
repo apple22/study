@@ -11,10 +11,13 @@
   "devDependencies": {
     "gulp": "^5.0.0",
     "gulp-autoprefixer": "^9.0.0",
+    "gulp-clean-css": "^4.3.0",
     "gulp-sass": "^5.1.0",
     "gulp-terser": "^2.1.0",
     "gulp-uglify": "^3.0.2",
-    "sass": "^1.77.8"
+    "pretty": "^2.0.0",
+    "sass": "^1.77.8",
+    "through2": "^4.0.2"
   },
   "dependencies": {
     "fsync": "^0.0.0",
