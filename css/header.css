@@ -148,7 +148,8 @@ header .tab_menu #border {
   float: right;
   width: 1px;
   height: 30%;
-  background: #fff;
+  background: rgb(255, 255, 255);
+  opacity: 0.5;
 }
 header .bread_scrumb {
   width: 100%;
