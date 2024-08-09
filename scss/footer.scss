@@ -17,6 +17,7 @@
 .footer_wrap {
   width: 94.79166666667%;
   height: 625.99px;
+  position: relative;
   background-color: #ebeff8;
   margin: 20px auto;
   @include flex(space-around);
@@ -84,39 +85,25 @@
         }/*li*/
       }/*ul:nth-child(1)*/
       ul:nth-child(2){
-      
         color:rgba(102.00000151991844, 102.00000151991844, 102.00000151991844, 1);
         font-size: 0.875rem;
         text-align:left;
         font-family: "Pretendard-Regular";
-
-        .address{
- 
-        }
-
-        .email{
-         
-
-        }
 
         li:nth-child(1){
             margin-bottom:9px;
             .email{
                 border-bottom: 1px solid rgba(102.00000151991844, 102.00000151991844, 102.00000151991844, 1);
             }
-     
-            
         }
 
         li:nth-child(2){
-
             b{
             color:#E7013A;
             font-weight:900;
             font-family: 'Poppins-Bold';
             }
         }
-
       }
     }/*div:nth-child(2)*/
   } /*footer_wrap_inner*/

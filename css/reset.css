@@ -35,7 +35,6 @@ time, mark, audio, video {
   src: url("/font/Pretendard-Bold.otf") format("woff2");
   font-weight: normal;
   font-style: normal;
-
 }
 
 @font-face {
