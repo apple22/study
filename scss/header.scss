@@ -102,6 +102,8 @@ header {
         justify-content: unset;
         z-index: 99;
 
+   
+
         ul:nth-child(2) {
           right: 3%;
           max-height: 210px;
@@ -153,6 +155,8 @@ header {
             @include flex(unset);
             text-align: left;
             margin: auto;
+
+            
           } /*li*/
         } /*ul*/
       } /*dropdown_nav*/
@@ -170,10 +174,25 @@ header {
           opacity: 0.800000011920929;
           letter-spacing: -2.299999952316284;
           font-family: "Pretendard-bold";
+          position:relative;
+
+          a{
+          z-index:99;
+          position:relative;
+          }
+
+          .hover{
+            position: absolute;
+            background-color: rgba( 255, 255, 255, 0.5 );
+            display:none;
+            width:150%;
+            height:190%;
+            right: -25%;
+            z-index:-1;
+          }
 
           a:hover {
             font-weight: 900;
-            color: #cf0032;
           }
         } /*li*/
       } /*ul:nth-child(2)*/

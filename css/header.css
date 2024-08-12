@@ -177,10 +177,23 @@ header .top .gnb .gnb_ul li {
   opacity: 0.8000000119;
   letter-spacing: -2.2999999523;
   font-family: "Pretendard-bold";
+  position: relative;
+}
+header .top .gnb .gnb_ul li a {
+  z-index: 99;
+  position: relative;
+}
+header .top .gnb .gnb_ul li .hover {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.5);
+  display: none;
+  width: 150%;
+  height: 190%;
+  right: -25%;
+  z-index: -1;
 }
 header .top .gnb .gnb_ul li a:hover {
   font-weight: 900;
-  color: #cf0032;
 }
 header #sub_content {
   width: 94.5054945055%;
