@@ -11,7 +11,6 @@ gulp.task('uglify', function() {
 // gulp를 실행하면 default로 uglify task를 실행
 gulp.task('default', gulp.series('uglify'));
 
-
 //clean css
 gulp.task('cleanCss', function() {
 	 return gulp.src('/nxt/html/css/*.css')
@@ -35,6 +34,7 @@ gulp.task('watch', function() {
 });
 
 // 기본 작업
+
 gulp.task('default', gulp.series('styles', 'cleanCss', 'uglify', 'watch'));
 
 /*const gulp = require('gulp');

@@ -3,32 +3,59 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/dist/css/reset.css">
-    <link rel="stylesheet" href="/dist/css/header.css">
-    <link rel="stylesheet" href="/dist/css/ceo.css">
-    <link rel="stylesheet" href="/dist/css/footer.css">
-    <title>넥스트레이드</title>
+    <link rel="stylesheet" href="../dist/css/reset.css">
+    <link rel="stylesheet" href="../dist/css/header.css">
+    <link rel="stylesheet" href="../dist/css/ceo.css">
+    <link rel="stylesheet" href="../dist/css/footer.css">
+    <title>넥스트레이드</title> 
   </head>
   <body>
     <div class="header_wrap">
-    <div class="banner"></div>
     <!--banner-->
     <header>
       <div class="top">
-        <ul>
+        <ul class="top_ul">
           <img src="../image/image_01.png">
           <img src="../image/image_02.png">
         </ul>
-        <nav class="gnb">
-          <ul>
-            <li>NXT 소개</li>
-            <li>NXT 시장</li>
-            <li>NXT 시장정보</li>
-            <li>공지사항</li>
-            <li>회사홍보</li>
+        <div class="gnb">
+          <ul class="gnb_ul">
+            <li><a href="#" data-n="1">NXT 소개</a></li>
+            <li><a href="#" data-n="2">NXT 시장</a></li>
+            <li><a href="#" data-n="3">NXT 시장정보</a></li>
+            <li><a href="#" data-n="4">공지사항</a></li>
+            <li><a href="#" data-n="5">회사홍보</a></li>
           </ul>
-        </nav>
-        <ul>
+          <div class="dropdown_nav">
+                      <ul data-n="1"><img src="../image/image_13.png">
+                      <li>CEO 인사말</li>
+                      <li>회사소개</li>
+                      <li>연혁</li>
+                      <li>조직</li>
+                      <li>비전 및 목표</li>
+                      </ul>
+                     <ul data-n="2"><img src="/image/image_13.png">
+                        <li>거래시장 개요</li>
+                        <li>거래시장 절차</li>
+                        <li>거래 규정 및 법규</li>
+                      </ul>
+                      <ul data-n="3"><img src="/image/image_13.png">
+                        <li>거래현황</li>
+                        <li>시장안내</li>
+                      </ul>
+                      <ul data-n="4"><img src="/image/image_13.png">
+                        <li>공지사항</li>
+                        <li>경영공시</li>
+                        <li>재무정보 / IR</li>
+                        <li>채용정보</li>
+                      </ul>
+                      <ul data-n="5"><img src="/image/image_13.png">
+                        <li>홍보자료</li>
+
+                      </ul>
+          </div><!--dropdown_nav-->
+        </div>
+        <ul class="member_ul">
           <li>
             <img src="../image/image_04.png">회원사 업무포털
           </li>
@@ -37,6 +64,7 @@
           </li>
           <li><img src="../image/image_06.png"></li>
         </ul>
+
       </div>
       <div id="sub_content">
       Korea’s first 
@@ -64,8 +92,10 @@
         <li>CEO 인사말</li>
        </ul>
       </div><!--bread_scrumb-->
+  
     </header>
     <!--header-->
   </div><!--header_wrap-->
   </body>
 </html>
+

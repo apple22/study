@@ -1,6 +1,7 @@
 .footer_wrap {
   width: 94.7916666667%;
   height: 625.99px;
+  position: relative;
   background-color: #ebeff8;
   margin: 20px auto;
   display: flex;
