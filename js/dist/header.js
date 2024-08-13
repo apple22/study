@@ -3,7 +3,6 @@ $(document).ready(function(){
     
     $(document).on('mouseenter', 'ul.gnb_ul li', function() {
         var dataN = $(this).find('a').data('n');
-        
         // 현재 a 태그 색상을 변경
         //$(this).find('a').css('color', '#cf0032');
         
@@ -42,5 +41,41 @@ $(document).ready(function(){
             // 모든 스팬 요소를 숨김
             $('.gnb ul li span').css('display', 'none');
         });
+    });/*mouseleave*/
+
+   
+    var flag = 0; // 함수 외부에 flag 변수 선언
+
+    $(document).on('click', '.select_down', function() {
+     
+        var imgurl = "../image/image_14.png";
+            
+        $("#img_form_url").attr("src", imgurl);
+
+        if(flag === 0){
+            $(".select_over").stop().animate({
+                height: 70
+            });
+
+            flag = 1; // flag 값을 1로 변경
+    
+        } else if(flag === 1){
+
+            var imgurl_a = "../image/image_05.png";
+            
+            $("#img_form_url").attr("src", imgurl_a);
+
+
+            $(".select_over").stop().animate({
+                height: 0
+            });
+    
+            flag = 0; // flag 값을 다시 0으로 변경
+        }
+    
+        console.log(flag);
     });
+
+
+
 });
