@@ -93,7 +93,6 @@ header {
       .dropdown_nav {
         position: absolute;
         width: 92%;
-        height: 305px;
         top: 86px;
         left: 50%;
         transform: translateX(-44%);
@@ -102,32 +101,42 @@ header {
         justify-content: unset;
         z-index: 99;
 
-   
+        li:nth-child(2) {
+          margin-top: 10px;
+      }
+      li:last-child {
+          margin-bottom: 10px;
+      }
+
+        ul:nth-child(1){
+          right: -2%; 
+         
+        }
+
 
         ul:nth-child(2) {
-          right: 3%;
-          max-height: 210px;
+          right: -2%;
+        
         }
 
         ul:nth-child(3) {
-          right: 3%;
-          max-height: 130px;
+          right: -4%;
+       
         }
 
         ul:nth-child(4) {
-          right: 5%;
+          right: -6%;
         }
 
         ul:nth-child(5) {
-          max-height: 50px;
-          right: 8%;
+          right: -5%;
         }
 
         ul {
           width: 16%;
           height: 0px;
           background-color: #cf0032;
-          margin: 14px;
+          margin: 1px;
           border-top-left-radius: 10px;
           border-top-right-radius: 10px;
           border-bottom-left-radius: 10px;
@@ -138,6 +147,7 @@ header {
           flex-direction: column;
           font-family: "Pretendard-bold";
           overflow: hidden;
+        
 
           img {
             position: absolute;
@@ -150,11 +160,30 @@ header {
             color: #fff !important;
             opacity: unset;
             font-size: 0.875em;
-            width: 70%;
+            width: 94%;
             text-align: center;
             @include flex(unset);
             text-align: left;
             margin: auto;
+            height: 32px;
+            border-radius: 4px;
+            min-height: 32px;
+         
+            &:hover {
+              background: #B01940;
+              border-radius: 4px;
+          }
+
+          a{
+            display: block;
+            width: 75%;
+            margin: auto;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            border-radius: 4px;
+          }
 
             
           } /*li*/

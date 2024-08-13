@@ -16,7 +16,6 @@ $(document).ready(function(){
         
         // 다른 스팬 요소 숨기기
         $('.gnb ul li span').not(currentSpan).css('display', 'none');
-        
         // 드롭다운 메뉴 애니메이트 및 표시
         currentUl.stop(true, true).addClass('on').css('overflow', 'visible').animate({
             height: '100%'
@@ -24,7 +23,6 @@ $(document).ready(function(){
 
         // 현재 스팬 표시
        // currentSpan.css('display', 'block');
-        
         // 나머지 드롭다운 메뉴를 숨김
         $('.dropdown_nav ul').not(currentUl).stop(true, true).animate({
             height: 0
@@ -39,10 +37,8 @@ $(document).ready(function(){
             height: 0
         }, function() {
             $(this).css('overflow', 'hidden');
-            
             // 모든 li a의 색상을 white로 변경
             $('ul.gnb_ul li a').css('color', 'white');
-            
             // 모든 스팬 요소를 숨김
             $('.gnb ul li span').css('display', 'none');
         });
