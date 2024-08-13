@@ -43,13 +43,9 @@ $(document).ready(function(){
         });
     });/*mouseleave*/
 
-   
     var flag = 0; // 함수 외부에 flag 변수 선언
-
     $(document).on('click', '.select_down', function() {
-     
         var imgurl = "../image/image_14.png";
-            
         $("#img_form_url").attr("src", imgurl);
 
         if(flag === 0){
@@ -58,24 +54,37 @@ $(document).ready(function(){
             });
 
             flag = 1; // flag 값을 1로 변경
-    
         } else if(flag === 1){
 
+                  
+            $(document).on('click', '.en', function() {
+                $('.lang').text('EN');
+                 
+            });
+
+            $(document).on('click', '.kr', function() {
+                $('.lang').text('KR');
+
+            });
+
+
             var imgurl_a = "../image/image_05.png";
-            
             $("#img_form_url").attr("src", imgurl_a);
-
-
             $(".select_over").stop().animate({
                 height: 0
             });
-    
             flag = 0; // flag 값을 다시 0으로 변경
         }
-    
         console.log(flag);
-    });
+    });/*select_down*/
 
+
+    $(document).on('click', '.hamburgur_menu', function() {
+        
+
+    });/*hamburgur*/
 
 
 });
+
+
