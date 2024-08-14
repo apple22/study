@@ -306,3 +306,10 @@ header .bread_scrumb ul li b {
 }
 
 /*header*/
+.header_popup {
+  width: 100%;
+  height: 987px;
+  position: absolute;
+  top: 0;
+  z-index: 99;
+}
