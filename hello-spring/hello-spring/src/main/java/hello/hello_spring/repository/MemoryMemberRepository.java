@@ -3,8 +3,11 @@ package hello.hello_spring.repository;
 import hello.hello_spring.domain.Member;
 import org.springframework.stereotype.Repository;
 
+import java.sql.*;
 import java.util.*;
 
+import static java.sql.DriverManager.getConnection;
+import static org.apache.tomcat.util.descriptor.InputSourceUtil.close;
 
 
 public class MemoryMemberRepository implements MemberRepository {
@@ -13,10 +16,20 @@ public class MemoryMemberRepository implements MemberRepository {
 
     @Override
     public Member save(Member member) {
+
+
+
+
+
+
+
+
        member.setId(++sequence);
        store.put(member.getId(), member);
        return member;
     }
+
+
 
     @Override
     public Optional<Member> findById(Long id) {
