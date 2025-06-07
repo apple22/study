@@ -116,6 +116,44 @@
 			<version>4.7</version>
 			<scope>test</scope>
 		</dependency>        
+		
+		<!-- Mybatis 사용하기 위한 API -->
+		<!-- https://mvnrepository.com/artifact/org.mybatis/mybatis -->
+		<dependency>
+  	  		<groupId>org.mybatis</groupId>
+  	 		<artifactId>mybatis</artifactId>
+    		<version>3.5.19</version>
+		</dependency>
+		
+	
+		<!-- https://mvnrepository.com/artifact/org.mybatis/mybatis-spring -->
+		<dependency>
+		    <groupId>org.mybatis</groupId>
+		    <artifactId>mybatis-spring</artifactId>
+		    <version>3.0.4</version>
+		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/hikari-cp/hikari-cp -->
+		<dependency>
+		    <groupId>com.zaxxer</groupId>
+		    <artifactId>HikariCP</artifactId>
+		    <version>5.0.1</version> <!-- 또는 안정적인 버전 선택 -->
+		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/org.springframework/spring-jdbc -->
+		<dependency>
+		    <groupId>org.springframework</groupId>
+		    <artifactId>spring-jdbc</artifactId>
+		    <version>5.0.2.RELEASE</version>
+		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+		<dependency>
+		    <groupId>mysql</groupId>
+		    <artifactId>mysql-connector-java</artifactId>
+		    <version>8.0.33</version>
+		</dependency>
+						
 	</dependencies>
     <build>
         <plugins>
